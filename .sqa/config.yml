@@ -15,68 +15,68 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api git:
         commands:
-        - /usr/bin/env sh .sqa/script.lime_bold_caiman.sh
-        container: qc.acc_claret_insightful_finch
+        - /usr/bin/env sh .sqa/script.cinnabar_zealous_lionfish.sh
+        container: qc.acc_mustard_artistic_raccoon
   QC.Doc:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bone_jubilant_armadillo.sh
-        container: qc.doc_pistachio_spirited_weasel
+        - /usr/bin/env sh .sqa/script.wheat_easygoing_quoll.sh
+        container: qc.doc_smoke_assured_boar
       github.com/cessda/cessda.cdc.skg-if.api git:
         commands:
-        - /usr/bin/env sh .sqa/script.tundra_organized_jackal.sh
-        container: qc.doc_walnut_innocent_grizzly
+        - /usr/bin/env sh .sqa/script.persimmon_wise_owl.sh
+        container: qc.doc_marigold_generous_weasel
       github.com/cessda/cessda.cdc.skg-if.api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.mustard_exuberant_dormouse.sh
-        container: qc.doc_copper_timid_dugong
+        - /usr/bin/env sh .sqa/script.flax_kind_quoll.sh
+        container: qc.doc_claret_tactful_boa
       github.com/cessda/cessda.cdc.skg-if.api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.sand_visionary_wildcat.sh
-        container: qc.doc_mango_mysterious_leopard
+        - /usr/bin/env sh .sqa/script.obsidian_balanced_wolf.sh
+        container: qc.doc_ivory_forgiving_emu
   QC.Lic:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.seafoam_unique_giraffe.sh
-        container: qc.lic_storm_proud_gibbon
+        - /usr/bin/env sh .sqa/script.pansy_independent_wombat.sh
+        container: qc.lic_denim_eccentric_termite
   QC.Met:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.chili_dedicated_squid.sh
-        container: qc.met_bluebell_thankful_caribou
+        - /usr/bin/env sh .sqa/script.yellow_inventive_ocelot.sh
+        container: qc.met_mint_perky_otter
   QC.Sec:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cadet_insightful_piranha.sh
-        container: qc.sec_walnut_audacious_moth
+        - /usr/bin/env sh .sqa/script.mango_content_hippopotamus.sh
+        container: qc.sec_tundra_whimsical_parrot
   QC.Sty:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lemon_happy_hare.sh
-        container: qc.sty_bone_whimsical_salamander
+        - /usr/bin/env sh .sqa/script.lemon_zany_tortoise.sh
+        container: qc.sty_snow_tranquil_orca
       github.com/cessda/cessda.cdc.skg-if.api hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cardamom_observant_jackal.sh
-        container: qc.sty_strawberry_daring_armadillo
+        - /usr/bin/env sh .sqa/script.raspberry_audacious_eagle.sh
+        container: qc.sty_flamingo_happy_baboon
       github.com/cessda/cessda.cdc.skg-if.api jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bronze_delighted_impala.sh
-        container: qc.sty_onyx_serene_donkey
+        - /usr/bin/env sh .sqa/script.salmon_optimistic_hornbill.sh
+        container: qc.sty_alabaster_practical_hippopotamus
   QC.Uni:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.blush_attentive_gerbil.sh
-        container: qc.uni_pansy_flexible_gazelle
+        - /usr/bin/env sh .sqa/script.blush_outgoing_dugong.sh
+        container: qc.uni_cherry_stoic_squid
   QC.Ver:
     repos:
       github.com/cessda/cessda.cdc.skg-if.api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.walnut_resourceful_badger.sh
-        container: qc.ver_green_authentic_snail
+        - /usr/bin/env sh .sqa/script.fern_logical_orangutan.sh
+        container: qc.ver_verdant_rugged_bat
 timeout: 5400
