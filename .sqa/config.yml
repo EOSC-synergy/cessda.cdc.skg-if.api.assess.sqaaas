@@ -1,0 +1,82 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cdc.skg-if.api:
+      branch: main
+      repo: https://github.com/cessda/cessda.cdc.skg-if.api
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lime_bold_caiman.sh
+        container: qc.acc_claret_insightful_finch
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bone_jubilant_armadillo.sh
+        container: qc.doc_pistachio_spirited_weasel
+      github.com/cessda/cessda.cdc.skg-if.api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.tundra_organized_jackal.sh
+        container: qc.doc_walnut_innocent_grizzly
+      github.com/cessda/cessda.cdc.skg-if.api markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.mustard_exuberant_dormouse.sh
+        container: qc.doc_copper_timid_dugong
+      github.com/cessda/cessda.cdc.skg-if.api restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sand_visionary_wildcat.sh
+        container: qc.doc_mango_mysterious_leopard
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.seafoam_unique_giraffe.sh
+        container: qc.lic_storm_proud_gibbon
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.chili_dedicated_squid.sh
+        container: qc.met_bluebell_thankful_caribou
+  QC.Sec:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.cadet_insightful_piranha.sh
+        container: qc.sec_walnut_audacious_moth
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lemon_happy_hare.sh
+        container: qc.sty_bone_whimsical_salamander
+      github.com/cessda/cessda.cdc.skg-if.api hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cardamom_observant_jackal.sh
+        container: qc.sty_strawberry_daring_armadillo
+      github.com/cessda/cessda.cdc.skg-if.api jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bronze_delighted_impala.sh
+        container: qc.sty_onyx_serene_donkey
+  QC.Uni:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.blush_attentive_gerbil.sh
+        container: qc.uni_pansy_flexible_gazelle
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.cdc.skg-if.api get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.walnut_resourceful_badger.sh
+        container: qc.ver_green_authentic_snail
+timeout: 5400
